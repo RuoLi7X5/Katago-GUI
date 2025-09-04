@@ -1,0 +1,10 @@
+^D:\FROMGITHUB\KATAGO\BUILD-MSVC-EIGEN\CMAKEFILES\2549B9D42E17417F6E2E62BEFA64FAD6\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/FromGithub/KataGo/cpp -BD:/FromGithub/KataGo/build-msvc-eigen --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/FromGithub/KataGo/build-msvc-eigen/katago.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

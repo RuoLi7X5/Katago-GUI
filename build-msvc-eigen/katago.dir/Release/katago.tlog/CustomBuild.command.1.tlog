@@ -1,0 +1,10 @@
+^D:\FROMGITHUB\KATAGO\CPP\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/FromGithub/KataGo/cpp -BD:/FromGithub/KataGo/build-msvc-eigen --check-stamp-file D:/FromGithub/KataGo/build-msvc-eigen/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

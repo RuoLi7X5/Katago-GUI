@@ -1,0 +1,546 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0EEF8FD9-55A1-3BD0-8F5E-FCEA3DD88894}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <VcpkgEnabled>false</VcpkgEnabled>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>katago</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="do_not_import_user.props" Condition="exists('do_not_import_user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\FromGithub\KataGo\build-msvc-eigen\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">katago.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">katago</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\FromGithub\KataGo\build-msvc-eigen\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">katago.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">katago</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\FromGithub\KataGo\build-msvc-eigen\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">katago.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">katago</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\FromGithub\KataGo\build-msvc-eigen\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">katago.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">katago</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\FromGithub\KataGo\cpp\external;D:\FromGithub\KataGo\cpp\external\tclap-1.2.2\include;D:\FromGithub\KataGo\vcpkg\installed\x64-windows\include;D:\FromGithub\KataGo\build-msvc-eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/FromGithub/KataGo/cpp/external/filesystem-1.5.8/include" /external:I "D:/FromGithub/KataGo/vcpkg/installed/x64-windows/include/eigen3"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;USE_EIGEN_BACKEND;NO_GIT_REVISION;NO_LIBZIP;NOMINMAX;BYTE_ORDER=1234;LITTLE_ENDIAN=1234;BIG_ENDIAN=4321;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;USE_EIGEN_BACKEND;NO_GIT_REVISION;NO_LIBZIP;NOMINMAX;BYTE_ORDER=1234;LITTLE_ENDIAN=1234;BIG_ENDIAN=4321;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\FromGithub\KataGo\cpp\external;D:\FromGithub\KataGo\cpp\external\tclap-1.2.2\include;D:\FromGithub\KataGo\vcpkg\installed\x64-windows\include;D:\FromGithub\KataGo\build-msvc-eigen;D:\FromGithub\KataGo\cpp\external\filesystem-1.5.8\include;D:\FromGithub\KataGo\vcpkg\installed\x64-windows\include\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\FromGithub\KataGo\cpp\external;D:\FromGithub\KataGo\cpp\external\tclap-1.2.2\include;D:\FromGithub\KataGo\vcpkg\installed\x64-windows\include;D:\FromGithub\KataGo\build-msvc-eigen;D:\FromGithub\KataGo\cpp\external\filesystem-1.5.8\include;D:\FromGithub\KataGo\vcpkg\installed\x64-windows\include\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file D:/FromGithub/KataGo/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary D:/FromGithub/KataGo/build-msvc-eigen/Debug/katago.exe -installedDir D:/FromGithub/KataGo/vcpkg/installed/x64-windows/debug/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>D:\FromGithub\KataGo\vcpkg\installed\x64-windows\debug\lib\zlibd.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>D:/FromGithub/KataGo/build-msvc-eigen/Debug/katago.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>D:/FromGithub/KataGo/build-msvc-eigen/Debug/katago.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <StackReserveSize>8388608</StackReserveSize>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\FromGithub\KataGo\cpp\external;D:\FromGithub\KataGo\cpp\external\tclap-1.2.2\include;D:\FromGithub\KataGo\vcpkg\installed\x64-windows\include;D:\FromGithub\KataGo\build-msvc-eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/FromGithub/KataGo/cpp/external/filesystem-1.5.8/include" /external:I "D:/FromGithub/KataGo/vcpkg/installed/x64-windows/include/eigen3"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;USE_EIGEN_BACKEND;NO_GIT_REVISION;NO_LIBZIP;NOMINMAX;BYTE_ORDER=1234;LITTLE_ENDIAN=1234;BIG_ENDIAN=4321;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;USE_EIGEN_BACKEND;NO_GIT_REVISION;NO_LIBZIP;NOMINMAX;BYTE_ORDER=1234;LITTLE_ENDIAN=1234;BIG_ENDIAN=4321;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\FromGithub\KataGo\cpp\external;D:\FromGithub\KataGo\cpp\external\tclap-1.2.2\include;D:\FromGithub\KataGo\vcpkg\installed\x64-windows\include;D:\FromGithub\KataGo\build-msvc-eigen;D:\FromGithub\KataGo\cpp\external\filesystem-1.5.8\include;D:\FromGithub\KataGo\vcpkg\installed\x64-windows\include\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\FromGithub\KataGo\cpp\external;D:\FromGithub\KataGo\cpp\external\tclap-1.2.2\include;D:\FromGithub\KataGo\vcpkg\installed\x64-windows\include;D:\FromGithub\KataGo\build-msvc-eigen;D:\FromGithub\KataGo\cpp\external\filesystem-1.5.8\include;D:\FromGithub\KataGo\vcpkg\installed\x64-windows\include\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file D:/FromGithub/KataGo/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary D:/FromGithub/KataGo/build-msvc-eigen/Release/katago.exe -installedDir D:/FromGithub/KataGo/vcpkg/installed/x64-windows/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>D:\FromGithub\KataGo\vcpkg\installed\x64-windows\lib\zlib.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>D:/FromGithub/KataGo/build-msvc-eigen/Release/katago.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>D:/FromGithub/KataGo/build-msvc-eigen/Release/katago.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <StackReserveSize>8388608</StackReserveSize>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\FromGithub\KataGo\cpp\external;D:\FromGithub\KataGo\cpp\external\tclap-1.2.2\include;D:\FromGithub\KataGo\vcpkg\installed\x64-windows\include;D:\FromGithub\KataGo\build-msvc-eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/FromGithub/KataGo/cpp/external/filesystem-1.5.8/include" /external:I "D:/FromGithub/KataGo/vcpkg/installed/x64-windows/include/eigen3"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;USE_EIGEN_BACKEND;NO_GIT_REVISION;NO_LIBZIP;NOMINMAX;BYTE_ORDER=1234;LITTLE_ENDIAN=1234;BIG_ENDIAN=4321;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;USE_EIGEN_BACKEND;NO_GIT_REVISION;NO_LIBZIP;NOMINMAX;BYTE_ORDER=1234;LITTLE_ENDIAN=1234;BIG_ENDIAN=4321;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\FromGithub\KataGo\cpp\external;D:\FromGithub\KataGo\cpp\external\tclap-1.2.2\include;D:\FromGithub\KataGo\vcpkg\installed\x64-windows\include;D:\FromGithub\KataGo\build-msvc-eigen;D:\FromGithub\KataGo\cpp\external\filesystem-1.5.8\include;D:\FromGithub\KataGo\vcpkg\installed\x64-windows\include\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\FromGithub\KataGo\cpp\external;D:\FromGithub\KataGo\cpp\external\tclap-1.2.2\include;D:\FromGithub\KataGo\vcpkg\installed\x64-windows\include;D:\FromGithub\KataGo\build-msvc-eigen;D:\FromGithub\KataGo\cpp\external\filesystem-1.5.8\include;D:\FromGithub\KataGo\vcpkg\installed\x64-windows\include\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file D:/FromGithub/KataGo/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary D:/FromGithub/KataGo/build-msvc-eigen/MinSizeRel/katago.exe -installedDir D:/FromGithub/KataGo/vcpkg/installed/x64-windows/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>D:\FromGithub\KataGo\vcpkg\installed\x64-windows\lib\zlib.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>D:/FromGithub/KataGo/build-msvc-eigen/MinSizeRel/katago.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>D:/FromGithub/KataGo/build-msvc-eigen/MinSizeRel/katago.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <StackReserveSize>8388608</StackReserveSize>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\FromGithub\KataGo\cpp\external;D:\FromGithub\KataGo\cpp\external\tclap-1.2.2\include;D:\FromGithub\KataGo\vcpkg\installed\x64-windows\include;D:\FromGithub\KataGo\build-msvc-eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/FromGithub/KataGo/cpp/external/filesystem-1.5.8/include" /external:I "D:/FromGithub/KataGo/vcpkg/installed/x64-windows/include/eigen3"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;USE_EIGEN_BACKEND;NO_GIT_REVISION;NO_LIBZIP;NOMINMAX;BYTE_ORDER=1234;LITTLE_ENDIAN=1234;BIG_ENDIAN=4321;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;USE_EIGEN_BACKEND;NO_GIT_REVISION;NO_LIBZIP;NOMINMAX;BYTE_ORDER=1234;LITTLE_ENDIAN=1234;BIG_ENDIAN=4321;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\FromGithub\KataGo\cpp\external;D:\FromGithub\KataGo\cpp\external\tclap-1.2.2\include;D:\FromGithub\KataGo\vcpkg\installed\x64-windows\include;D:\FromGithub\KataGo\build-msvc-eigen;D:\FromGithub\KataGo\cpp\external\filesystem-1.5.8\include;D:\FromGithub\KataGo\vcpkg\installed\x64-windows\include\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\FromGithub\KataGo\cpp\external;D:\FromGithub\KataGo\cpp\external\tclap-1.2.2\include;D:\FromGithub\KataGo\vcpkg\installed\x64-windows\include;D:\FromGithub\KataGo\build-msvc-eigen;D:\FromGithub\KataGo\cpp\external\filesystem-1.5.8\include;D:\FromGithub\KataGo\vcpkg\installed\x64-windows\include\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file D:/FromGithub/KataGo/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary D:/FromGithub/KataGo/build-msvc-eigen/RelWithDebInfo/katago.exe -installedDir D:/FromGithub/KataGo/vcpkg/installed/x64-windows/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>D:\FromGithub\KataGo\vcpkg\installed\x64-windows\lib\zlib.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>D:/FromGithub/KataGo/build-msvc-eigen/RelWithDebInfo/katago.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>D:/FromGithub/KataGo/build-msvc-eigen/RelWithDebInfo/katago.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <StackReserveSize>8388608</StackReserveSize>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\FromGithub\KataGo\cpp\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/FromGithub/KataGo/cpp/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/FromGithub/KataGo/cpp -BD:/FromGithub/KataGo/build-msvc-eigen --check-stamp-file D:/FromGithub/KataGo/build-msvc-eigen/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\FindZLIB.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CMakeCLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Linker\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Linker\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Linker\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\SelectLibraryConfigurations.cmake;D:\FromGithub\KataGo\build-msvc-eigen\CMakeFiles\4.1.1\CMakeCCompiler.cmake;D:\FromGithub\KataGo\build-msvc-eigen\CMakeFiles\4.1.1\CMakeCXXCompiler.cmake;D:\FromGithub\KataGo\build-msvc-eigen\CMakeFiles\4.1.1\CMakeRCCompiler.cmake;D:\FromGithub\KataGo\build-msvc-eigen\CMakeFiles\4.1.1\CMakeSystem.cmake;D:\FromGithub\KataGo\vcpkg\installed\x64-windows\share\eigen3\Eigen3Config.cmake;D:\FromGithub\KataGo\vcpkg\installed\x64-windows\share\eigen3\Eigen3ConfigVersion.cmake;D:\FromGithub\KataGo\vcpkg\installed\x64-windows\share\eigen3\Eigen3Targets.cmake;D:\FromGithub\KataGo\vcpkg\installed\x64-windows\share\zlib\vcpkg-cmake-wrapper.cmake;D:\FromGithub\KataGo\vcpkg\scripts\buildsystems\vcpkg.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\FromGithub\KataGo\build-msvc-eigen\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/FromGithub/KataGo/cpp/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/FromGithub/KataGo/cpp -BD:/FromGithub/KataGo/build-msvc-eigen --check-stamp-file D:/FromGithub/KataGo/build-msvc-eigen/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\FindZLIB.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CMakeCLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Linker\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Linker\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Linker\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\SelectLibraryConfigurations.cmake;D:\FromGithub\KataGo\build-msvc-eigen\CMakeFiles\4.1.1\CMakeCCompiler.cmake;D:\FromGithub\KataGo\build-msvc-eigen\CMakeFiles\4.1.1\CMakeCXXCompiler.cmake;D:\FromGithub\KataGo\build-msvc-eigen\CMakeFiles\4.1.1\CMakeRCCompiler.cmake;D:\FromGithub\KataGo\build-msvc-eigen\CMakeFiles\4.1.1\CMakeSystem.cmake;D:\FromGithub\KataGo\vcpkg\installed\x64-windows\share\eigen3\Eigen3Config.cmake;D:\FromGithub\KataGo\vcpkg\installed\x64-windows\share\eigen3\Eigen3ConfigVersion.cmake;D:\FromGithub\KataGo\vcpkg\installed\x64-windows\share\eigen3\Eigen3Targets.cmake;D:\FromGithub\KataGo\vcpkg\installed\x64-windows\share\zlib\vcpkg-cmake-wrapper.cmake;D:\FromGithub\KataGo\vcpkg\scripts\buildsystems\vcpkg.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\FromGithub\KataGo\build-msvc-eigen\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/FromGithub/KataGo/cpp/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/FromGithub/KataGo/cpp -BD:/FromGithub/KataGo/build-msvc-eigen --check-stamp-file D:/FromGithub/KataGo/build-msvc-eigen/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\FindZLIB.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CMakeCLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Linker\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Linker\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Linker\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\SelectLibraryConfigurations.cmake;D:\FromGithub\KataGo\build-msvc-eigen\CMakeFiles\4.1.1\CMakeCCompiler.cmake;D:\FromGithub\KataGo\build-msvc-eigen\CMakeFiles\4.1.1\CMakeCXXCompiler.cmake;D:\FromGithub\KataGo\build-msvc-eigen\CMakeFiles\4.1.1\CMakeRCCompiler.cmake;D:\FromGithub\KataGo\build-msvc-eigen\CMakeFiles\4.1.1\CMakeSystem.cmake;D:\FromGithub\KataGo\vcpkg\installed\x64-windows\share\eigen3\Eigen3Config.cmake;D:\FromGithub\KataGo\vcpkg\installed\x64-windows\share\eigen3\Eigen3ConfigVersion.cmake;D:\FromGithub\KataGo\vcpkg\installed\x64-windows\share\eigen3\Eigen3Targets.cmake;D:\FromGithub\KataGo\vcpkg\installed\x64-windows\share\zlib\vcpkg-cmake-wrapper.cmake;D:\FromGithub\KataGo\vcpkg\scripts\buildsystems\vcpkg.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\FromGithub\KataGo\build-msvc-eigen\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/FromGithub/KataGo/cpp/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/FromGithub/KataGo/cpp -BD:/FromGithub/KataGo/build-msvc-eigen --check-stamp-file D:/FromGithub/KataGo/build-msvc-eigen/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\FindZLIB.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CMakeCLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Linker\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Linker\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Linker\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\SelectLibraryConfigurations.cmake;D:\FromGithub\KataGo\build-msvc-eigen\CMakeFiles\4.1.1\CMakeCCompiler.cmake;D:\FromGithub\KataGo\build-msvc-eigen\CMakeFiles\4.1.1\CMakeCXXCompiler.cmake;D:\FromGithub\KataGo\build-msvc-eigen\CMakeFiles\4.1.1\CMakeRCCompiler.cmake;D:\FromGithub\KataGo\build-msvc-eigen\CMakeFiles\4.1.1\CMakeSystem.cmake;D:\FromGithub\KataGo\vcpkg\installed\x64-windows\share\eigen3\Eigen3Config.cmake;D:\FromGithub\KataGo\vcpkg\installed\x64-windows\share\eigen3\Eigen3ConfigVersion.cmake;D:\FromGithub\KataGo\vcpkg\installed\x64-windows\share\eigen3\Eigen3Targets.cmake;D:\FromGithub\KataGo\vcpkg\installed\x64-windows\share\zlib\vcpkg-cmake-wrapper.cmake;D:\FromGithub\KataGo\vcpkg\scripts\buildsystems\vcpkg.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\FromGithub\KataGo\build-msvc-eigen\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\core\global.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\core\base64.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\core\bsearch.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\core\commandloop.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\core\config_parser.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\core\datetime.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\core\elo.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\core\fancymath.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\core\fileutils.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\core\hash.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\core\logger.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\core\mainargs.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\core\makedir.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\core\md5.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\core\multithread.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\core\parallel.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\core\rand.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\core\rand_helpers.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\core\sha2.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\core\test.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\core\threadsafecounter.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\core\threadsafequeue.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\core\threadtest.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\core\timer.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\game\board.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\game\rules.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\game\boardhistory.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\game\graphhash.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\dataio\sgf.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\dataio\numpywrite.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\dataio\poswriter.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\dataio\trainingwrite.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\dataio\loadmodel.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\dataio\homedata.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\dataio\files.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\neuralnet\nninputs.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\neuralnet\sgfmetadata.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\neuralnet\modelversion.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\neuralnet\nneval.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\neuralnet\desc.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\neuralnet\eigenbackend.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\book\book.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\book\bookcssjs.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\search\timecontrols.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\search\searchparams.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\search\mutexpool.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\search\search.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\search\searchnode.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\search\searchresults.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\search\searchhelpers.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\search\searchexplorehelpers.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\search\searchmirror.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\search\searchmultithreadhelpers.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\search\searchnnhelpers.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\search\searchtimehelpers.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\search\searchupdatehelpers.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\search\asyncbot.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\search\distributiontable.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\search\localpattern.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\search\searchnodetable.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\search\subtreevaluebiastable.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\search\patternbonustable.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\search\analysisdata.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\search\reportedsearchvalues.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\program\gtpconfig.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\program\setup.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\program\playutils.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\program\playsettings.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\program\play.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\program\selfplaymanager.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\tests\testboardarea.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\tests\testboardbasic.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\tests\testbook.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\tests\testcommon.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\tests\testconfig.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\tests\testmisc.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\tests\testnnevalcanary.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\tests\testrules.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\tests\testscore.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\tests\testsgf.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\tests\testsymmetries.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\tests\testnninputs.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\tests\testownership.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\tests\testsearchcommon.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\tests\testsearchnonn.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\tests\testsearch.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\tests\testsearchv3.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\tests\testsearchv8.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\tests\testsearchv9.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\tests\testsearchmisc.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\tests\testtime.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\tests\testtrainingwrite.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\tests\testnn.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\tests\tinymodel.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\tests\tinymodeldata.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\distributed\client.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\command\commandline.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\command\analysis.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\command\benchmark.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\command\contribute.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\command\evalsgf.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\command\gatekeeper.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\command\genbook.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\command\gputest.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\command\gtp.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\command\match.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\command\misc.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\command\runtests.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\command\sandbox.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\command\selfplay.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\command\tune.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\command\writetrainingdata.cpp" />
+    <ClCompile Include="D:\FromGithub\KataGo\cpp\main.cpp" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="D:\FromGithub\KataGo\build-msvc-eigen\ZERO_CHECK.vcxproj">
+      <Project>{C710E3D3-8E9C-353A-AFE5-6856B0519F6B}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
